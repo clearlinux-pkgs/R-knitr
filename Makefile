@@ -1,4 +1,5 @@
 PKG_NAME := R-knitr
-URL := http://cran.r-project.org/src/contrib/knitr_1.11.tar.gz
+URL := http://cran.r-project.org/src/contrib/knitr_1.12.tar.gz
+ARCHIVES :=
 
 include ../common/Makefile.common
