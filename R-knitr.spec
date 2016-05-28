@@ -4,26 +4,12 @@
 #
 Name     : R-knitr
 Version  : 1.13
-Release  : 17
+Release  : 18
 URL      : http://cran.r-project.org/src/contrib/knitr_1.13.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/knitr_1.13.tar.gz
 Summary  : A General-Purpose Package for Dynamic Report Generation in R
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-yaml
-Requires: R-evaluate
-Requires: R-stringr
-Requires: R-markdown
-Requires: R-formatR
-Requires: R-highr
-Requires: R-testit
-BuildRequires : R-evaluate
-BuildRequires : R-formatR
-BuildRequires : R-highr
-BuildRequires : R-markdown
-BuildRequires : R-stringr
-BuildRequires : R-testit
-BuildRequires : R-yaml
 BuildRequires : clr-R-helpers
 
 %description
@@ -51,6 +37,7 @@ mkdir -p %{buildroot}/usr/lib64/R/library
 R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library knitr
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
