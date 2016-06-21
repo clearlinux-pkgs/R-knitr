@@ -4,12 +4,22 @@
 #
 Name     : R-knitr
 Version  : 1.13
-Release  : 19
+Release  : 20
 URL      : http://cran.r-project.org/src/contrib/knitr_1.13.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/knitr_1.13.tar.gz
 Summary  : A General-Purpose Package for Dynamic Report Generation in R
 Group    : Development/Tools
 License  : GPL-2.0
+Requires: R-yaml
+Requires: R-evaluate
+Requires: R-markdown
+Requires: R-highr
+Requires: R-formatR
+BuildRequires : R-evaluate
+BuildRequires : R-formatR
+BuildRequires : R-highr
+BuildRequires : R-markdown
+BuildRequires : R-yaml
 BuildRequires : clr-R-helpers
 
 %description
