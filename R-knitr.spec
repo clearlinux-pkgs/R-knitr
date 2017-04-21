@@ -4,16 +4,20 @@
 #
 Name     : R-knitr
 Version  : 1.15.1
-Release  : 33
+Release  : 34
 URL      : http://cran.r-project.org/src/contrib/knitr_1.15.1.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/knitr_1.15.1.tar.gz
 Summary  : A General-Purpose Package for Dynamic Report Generation in R
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-formatR
-Requires: R-mime
-BuildRequires : R-formatR
-BuildRequires : R-mime
+Requires: R-evaluate
+Requires: R-highr
+Requires: R-markdown
+Requires: R-yaml
+BuildRequires : R-evaluate
+BuildRequires : R-highr
+BuildRequires : R-markdown
+BuildRequires : R-yaml
 BuildRequires : clr-R-helpers
 
 %description
@@ -26,12 +30,15 @@ BuildRequires : clr-R-helpers
 %setup -q -c -n knitr
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1488814724
+export SOURCE_DATE_EPOCH=1492799380
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1488814724
+export SOURCE_DATE_EPOCH=1492799380
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -47,7 +54,7 @@ R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library knitr
 
@@ -59,6 +66,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/knitr/INDEX
 /usr/lib64/R/library/knitr/Meta/Rd.rds
 /usr/lib64/R/library/knitr/Meta/demo.rds
+/usr/lib64/R/library/knitr/Meta/features.rds
 /usr/lib64/R/library/knitr/Meta/hsearch.rds
 /usr/lib64/R/library/knitr/Meta/links.rds
 /usr/lib64/R/library/knitr/Meta/nsInfo.rds
