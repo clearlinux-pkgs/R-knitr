@@ -4,19 +4,23 @@
 #
 Name     : R-knitr
 Version  : 1.22
-Release  : 69
+Release  : 70
 URL      : https://cran.r-project.org/src/contrib/knitr_1.22.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/knitr_1.22.tar.gz
 Summary  : A General-Purpose Package for Dynamic Report Generation in R
 Group    : Development/Tools
 License  : GPL-2.0
+Requires: R-evaluate
+Requires: R-stringi
 BuildRequires : R-DBI
 BuildRequires : R-RCurl
 BuildRequires : R-XML
+BuildRequires : R-evaluate
 BuildRequires : R-formatR
 BuildRequires : R-highr
 BuildRequires : R-markdown
 BuildRequires : R-png
+BuildRequires : R-stringi
 BuildRequires : R-xfun
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
@@ -35,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552930012
+export SOURCE_DATE_EPOCH=1552963076
 
 %install
-export SOURCE_DATE_EPOCH=1552930012
+export SOURCE_DATE_EPOCH=1552963076
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
