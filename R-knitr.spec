@@ -4,31 +4,28 @@
 #
 Name     : R-knitr
 Version  : 1.23
-Release  : 74
+Release  : 75
 URL      : https://cran.r-project.org/src/contrib/knitr_1.23.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/knitr_1.23.tar.gz
 Summary  : A General-Purpose Package for Dynamic Report Generation in R
 Group    : Development/Tools
 License  : GPL-2.0
+Requires: R-evaluate
 Requires: R-highr
+Requires: R-markdown
+Requires: R-stringr
 Requires: R-xfun
 Requires: R-yaml
-BuildRequires : R-DBI
-BuildRequires : R-RCurl
-BuildRequires : R-XML
-BuildRequires : R-formatR
+BuildRequires : R-evaluate
 BuildRequires : R-highr
 BuildRequires : R-markdown
-BuildRequires : R-png
+BuildRequires : R-stringr
 BuildRequires : R-xfun
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
 
 %description
-# knitr
-[![Build Status](https://travis-ci.org/yihui/knitr.svg)](https://travis-ci.org/yihui/knitr)
-[![Coverage status](https://codecov.io/gh/yihui/knitr/branch/master/graph/badge.svg)](https://codecov.io/github/yihui/knitr?branch=master)
-[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/knitr)](https://cran.r-project.org/package=knitr)
+using Literate Programming techniques.
 
 %prep
 %setup -q -c -n knitr
@@ -37,13 +34,13 @@ BuildRequires : buildreq-R
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1558197187
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562087944
 
 %install
-export SOURCE_DATE_EPOCH=1558197187
+export SOURCE_DATE_EPOCH=1562087944
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

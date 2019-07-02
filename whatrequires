@@ -11,5 +11,7 @@ R-jsonlite
 R-lme4
 R-magrittr
 R-openssl
+R-rgl
+R-rmarkdown
 R-roxygen2
 apache-spark
