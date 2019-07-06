@@ -9,7 +9,8 @@ R-highr
 R-httr
 R-jsonlite
 R-lme4
-R-magrittr
+R-manipulateWidget
+R-modest
 R-openssl
 R-rgl
 R-rmarkdown
