@@ -1,11 +1,11 @@
 # This file contains recursive sources that require this package
 R-DBI
 R-R6
-R-curl
 R-devtools
 R-digest
 R-formatR
 R-highr
+R-htmlTable
 R-httr
 R-jsonlite
 R-lme4
