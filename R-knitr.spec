@@ -4,7 +4,7 @@
 #
 Name     : R-knitr
 Version  : 1.25
-Release  : 81
+Release  : 82
 URL      : https://cran.r-project.org/src/contrib/knitr_1.25.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/knitr_1.25.tar.gz
 Summary  : A General-Purpose Package for Dynamic Report Generation in R
@@ -23,6 +23,7 @@ BuildRequires : R-stringr
 BuildRequires : R-xfun
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 Provides a general-purpose tool for dynamic report generation in R using
@@ -36,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568909976
+export SOURCE_DATE_EPOCH=1571851208
 
 %install
-export SOURCE_DATE_EPOCH=1568909976
+export SOURCE_DATE_EPOCH=1571851208
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
