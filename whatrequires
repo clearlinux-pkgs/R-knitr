@@ -1,8 +1,5 @@
 # This file contains recursive sources that require this package
-R-DBI
-R-digest
 R-formatR
-R-highr
 R-htmlTable
 R-jsonlite
 R-lintr
@@ -14,4 +11,3 @@ R-rgl
 R-rmarkdown
 R-roxygen2
 R-spelling
-apache-spark
