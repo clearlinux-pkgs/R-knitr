@@ -4,7 +4,7 @@
 #
 Name     : R-knitr
 Version  : 1.29
-Release  : 90
+Release  : 91
 URL      : https://cran.r-project.org/src/contrib/knitr_1.29.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/knitr_1.29.tar.gz
 Summary  : A General-Purpose Package for Dynamic Report Generation in R
