@@ -11,6 +11,7 @@ R-manipulateWidget
 R-modest
 R-openssl
 R-pbkrtest
+R-reprex
 R-rgl
 R-rmarkdown
 R-roxygen2
