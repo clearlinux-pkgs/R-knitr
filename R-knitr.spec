@@ -4,7 +4,7 @@
 #
 Name     : R-knitr
 Version  : 1.37
-Release  : 110
+Release  : 111
 URL      : https://cran.r-project.org/src/contrib/knitr_1.37.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/knitr_1.37.tar.gz
 Summary  : A General-Purpose Package for Dynamic Report Generation in R
@@ -35,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639762211
+export SOURCE_DATE_EPOCH=1641042342
 
 %install
-export SOURCE_DATE_EPOCH=1639762211
+export SOURCE_DATE_EPOCH=1641042342
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
