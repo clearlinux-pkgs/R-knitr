@@ -4,13 +4,13 @@ R-flextable
 R-formatR
 R-formattable
 R-htmlTable
+R-htmlwidgets
 R-kableExtra
 R-lintr
 R-lme4
 R-manipulateWidget
 R-modest
 R-openssl
-R-pbkrtest
 R-reprex
 R-rgl
 R-rmarkdown
