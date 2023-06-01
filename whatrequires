@@ -1,4 +1,5 @@
 # This file contains recursive sources that require this package
+R-Hmisc
 R-arsenal
 R-flextable
 R-formatR
@@ -14,6 +15,7 @@ R-openssl
 R-reprex
 R-rgl
 R-rmarkdown
+R-rms
 R-roxygen2
 R-spelling
 R-tables
